@@ -1,10 +1,12 @@
+const { normalizarCep } = require('../utils/cep');
+
 const BASE_URL = 'https://brasilapi.com.br/api/cep/v1';
 
 // Função pura: só transforma dados, não faz nenhuma chamada de rede.
 // É por isso que dá pra testar sem precisar da internet.
 function normalizarResposta(dadosBrutos) {
   return {
-    cep: dadosBrutos.cep,
+    cep: normalizarCep(dadosBrutos.cep),
     logradouro: dadosBrutos.street,
     bairro: dadosBrutos.neighborhood,
     cidade: dadosBrutos.city,

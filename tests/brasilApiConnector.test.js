@@ -2,7 +2,6 @@ const { normalizarResposta } = require('../src/connectors/brasilApiConnector');
 
 describe('brasilApiConnector - normalizarResposta', () => {
   it('converte o formato da BrasilAPI para o formato padrão do projeto', () => {
-    // Exemplo real de resposta da BrasilAPI (documentação oficial)
     const respostaReal = {
       cep: '05010000',
       state: 'SP',
