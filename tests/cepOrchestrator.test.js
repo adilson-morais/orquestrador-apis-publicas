@@ -2,8 +2,7 @@ const brasilApiConnector = require('../src/connectors/brasilApiConnector');
 const viaCepConnector = require('../src/connectors/viaCepConnector');
 const { buscarCepConsolidado } = require('../src/services/cepOrchestrator');
 
-// Substitui os conectores de verdade por versões falsas, controladas
-// pelo teste — nenhuma chamada de rede acontece aqui.
+
 jest.mock('../src/connectors/brasilApiConnector');
 jest.mock('../src/connectors/viaCepConnector');
 

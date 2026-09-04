@@ -24,9 +24,6 @@ async function buscarCep(cep) {
 
   const dadosBrutos = await resposta.json();
 
-  // Pegadinha real da ViaCEP: CEP inexistente volta com HTTP 200 (não
-  // com um status de erro), então "resposta.ok" sozinho não é suficiente
-  // pra saber se deu certo. Precisa checar esse campo no corpo também.
   if (dadosBrutos.erro) {
     throw new Error(`ViaCEP: CEP ${cep} não encontrado`);
   }
